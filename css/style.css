@@ -1,0 +1,432 @@
+/* ============================================
+   Custom Styles for Portfolio Website
+   ============================================ */
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ============================================
+   Particle Canvas Background
+   ============================================ */
+
+#particles-canvas {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    pointer-events: none;
+}
+
+/* ============================================
+   Navigation Styles
+   ============================================ */
+
+#navbar.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ============================================
+   Hero Section Animations
+   ============================================ */
+
+.hero-title {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.hero-cta {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Skill Bars
+   ============================================ */
+
+.skill-bar {
+    position: relative;
+}
+
+.skill-progress {
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-progress.animate {
+    width: 100%;
+}
+
+/* Individual skill bar width based on data attribute */
+.skill-item .skill-progress[data-progress="90"].animate {
+    width: 90%;
+}
+
+.skill-item .skill-progress[data-progress="85"].animate {
+    width: 85%;
+}
+
+.skill-item .skill-progress[data-progress="80"].animate {
+    width: 80%;
+}
+
+.skill-item .skill-progress[data-progress="75"].animate {
+    width: 75%;
+}
+
+/* ============================================
+   Project Cards
+   ============================================ */
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ============================================
+   Reveal Elements
+   ============================================ */
+
+.reveal-element {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
+}
+
+/* ============================================
+   Contact Form
+   ============================================ */
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #6366f1;
+}
+
+#form-status.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+#form-status.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #ef4444;
+}
+
+/* ============================================
+   Scroll Animation Utilities
+   ============================================ */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 0.8s ease forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   Gradient Text Effect
+   ============================================ */
+
+.gradient-text {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   Loading Animation (Optional)
+   ============================================ */
+
+.loading-spinner {
+    border: 3px solid rgba(99, 102, 241, 0.1);
+    border-top: 3px solid #6366f1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Custom Scrollbar (Optional)
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   Dark Mode Styles
+   ============================================ */
+
+/* Dark mode color variables */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode #navbar {
+    background-color: rgba(15, 23, 42, 0.9);
+}
+
+body.dark-mode .nav-link {
+    color: #cbd5e1;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #818cf8;
+}
+
+body.dark-mode #theme-toggle,
+body.dark-mode #theme-toggle-mobile {
+    color: #cbd5e1;
+}
+
+body.dark-mode #theme-toggle:hover,
+body.dark-mode #theme-toggle-mobile:hover {
+    color: #818cf8;
+}
+
+body.dark-mode section {
+    background-color: #0f172a;
+}
+
+body.dark-mode .bg-white {
+    background-color: #1e293b;
+}
+
+body.dark-mode .bg-gray-50 {
+    background-color: #0f172a;
+}
+
+body.dark-mode .text-gray-700,
+body.dark-mode .text-gray-800 {
+    color: #e2e8f0;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #94a3b8;
+}
+
+body.dark-mode .text-gray-400 {
+    color: #64748b;
+}
+
+body.dark-mode .text-gray-500 {
+    color: #475569;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .skill-item,
+body.dark-mode .bg-gray-50 {
+    background-color: #1e293b;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    border-color: #334155;
+}
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus {
+    border-color: #818cf8;
+}
+
+body.dark-mode footer {
+    background-color: #020617;
+}
+
+body.dark-mode .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode scrollbar */
+body.dark-mode::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+/* Theme toggle animation */
+#theme-toggle i,
+#theme-toggle-mobile i {
+    transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover i,
+#theme-toggle-mobile:hover i {
+    transform: rotate(20deg);
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+/* Focus visible for better keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    #particles-canvas,
+    nav,
+    #mobile-menu,
+    footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manish Tandurkar - CS Student at RVCE | ML/AI Enthusiast | Full Stack Developer | Software Development Intern at AVEVA | Published Researcher in Explainable AI">
+    <meta name="keywords" content="Manish Tandurkar, RVCE, Machine Learning, AI, Full Stack Developer, React, Python, Web Development, Software Engineer">
+    <meta name="author" content="Manish Tandurkar">
+    <title>Manish Tandurkar - Portfolio | ML/AI & Full Stack Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#home" class="text-2xl font-bold font-poppins text-primary">
+                    Manish<span class="text-secondary">.</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="text-gray-700 hover:text-primary transition-colors duration-300 focus:outline-none" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button & Dark Mode Toggle -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="text-gray-700 focus:outline-none" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon text-xl"></i>
+                    </button>
+                    <button class="text-gray-700 focus:outline-none" id="mobile-menu-btn">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden mt-4 pb-4" id="mobile-menu">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-300">About</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-300">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Particle Background Canvas -->
+        <canvas id="particles-canvas" class="absolute inset-0 w-full h-full"></canvas>
+        
+        <!-- Hero Content -->
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold font-poppins text-white mb-4 hero-title opacity-0">
+                    Hi, I'm <span class="text-primary bg-white px-4 rounded-lg">Manish Tandurkar</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 hero-subtitle opacity-0">
+                    CS Student | ML/AI Enthusiast | Full Stack Developer
+                </p>
+                <div class="flex justify-center space-x-4 hero-cta opacity-0">
+                    <a href="#projects" class="bg-primary hover:bg-indigo-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Get In Touch
+                    </a>
+                </div>
+                
+                <!-- Scroll Down Indicator -->
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <a href="#about" class="text-white">
+                        <i class="fas fa-chevron-down text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-poppins text-center mb-4 reveal-element">
+                About <span class="text-primary">Me</span>
+            </h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12 reveal-element"></div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Profile Image -->
+                <div class="reveal-element">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-20"></div>
+                        <img src="assets/images/profile.jpg" alt="Profile Picture" 
+                             class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto object-cover aspect-square"
+                             onerror="this.src='https://via.placeholder.com/400x400/6366f1/ffffff?text=Your+Photo'">
+                    </div>
+                </div>
+                
+                <!-- About Content -->
+                <div class="reveal-element">
+                    <h3 class="text-2xl font-semibold mb-4">Hello! I'm Manish Tandurkar</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a Computer Science Engineering student at R.V. College of Engineering, Bangalore, 
+                        with a strong passion for Machine Learning, AI, and Full Stack Development. Currently 
+                        maintaining a CGPA of 8.66, I'm deeply involved in building innovative solutions that 
+                        bridge the gap between technology and real-world problems.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        As a Software Development Intern at AVEVA, I work on enhancing industrial software 
+                        solutions. I'm also actively involved in research, particularly in explainable AI for 
+                        healthcare applications, and I love creating impactful projects using cutting-edge 
+                        technologies like React, Node.js, Python, and various ML frameworks.
+                    </p>
+                    
+                    <!-- Skills -->
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Python & Machine Learning</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="skill-progress bg-gradient-to-r from-primary to-secondary h-full rounded-full" data-progress="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">React & Full Stack Development</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="skill-progress bg-gradient-to-r from-primary to-secondary h-full rounded-full" data-progress="88"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Data Structures & Algorithms</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="skill-progress bg-gradient-to-r from-primary to-secondary h-full rounded-full" data-progress="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Cloud & DevOps (AWS, Docker)</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="skill-progress bg-gradient-to-r from-primary to-secondary h-full rounded-full" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-poppins text-center mb-4 reveal-element">
+                My <span class="text-primary">Projects</span>
+            </h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12 reveal-element"></div>
+            
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
+                    <div class="relative overflow-hidden group">
+                        <img src="assets/images/project1.jpg" alt="GraduateXAI" 
+                             class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://via.placeholder.com/600x400/6366f1/ffffff?text=GraduateXAI'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="text-sm">Research Project - Explainable AI</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">GraduateXAI</h3>
+                        <p class="text-gray-600 mb-4">
+                            Explainable AI framework for skin lesion classification using Grad-CAM and attention mechanisms. Published research with 94.7% accuracy on HAM10000 dataset.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">PyTorch</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Grad-CAM</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">ResNet</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-61475-0_25" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
+                                <i class="fas fa-book mr-2"></i>Publication
+                            </a>
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
+                    <div class="relative overflow-hidden group">
+                        <img src="assets/images/project2.jpg" alt="Full Stack Blog Platform" 
+                             class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Blog+Platform'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="text-sm">Full Stack Web Application</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Blog Platform with CMS</h3>
+                        <p class="text-gray-600 mb-4">
+                            A comprehensive blogging platform with content management, user authentication, real-time notifications, and responsive design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </a>
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
+                    <div class="relative overflow-hidden group">
+                        <img src="assets/images/project3.jpg" alt="Sentiment Analysis Tool" 
+                             class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://via.placeholder.com/600x400/10b981/ffffff?text=Sentiment+Analysis'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="text-sm">Machine Learning Project</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Sentiment Analysis System</h3>
+                        <p class="text-gray-600 mb-4">
+                            Advanced NLP-based sentiment analysis tool using BERT and transformers for analyzing social media and customer reviews.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">BERT</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Flask</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </a>
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 4 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
+                    <div class="relative overflow-hidden group">
+                        <img src="assets/images/project4.jpg" alt="E-Learning Platform" 
+                             class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://via.placeholder.com/600x400/f59e0b/ffffff?text=E-Learning'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                            <div class="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <p class="text-sm">Full Stack Application</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Interactive E-Learning Platform</h3>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive online learning platform with video streaming, progress tracking, quizzes, and real-time collaboration features.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Express</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
+                                <i class="fas fa-external-link-alt mr-2"></i>View Project
+                            </a>
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold font-poppins text-center mb-4 reveal-element">
+                Get In <span class="text-primary">Touch</span>
+            </h2>
+            <div class="w-24 h-1 bg-primary mx-auto mb-12 reveal-element"></div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                
+                <!-- Contact Info -->
+                <div class="reveal-element">
+                    <h3 class="text-2xl font-semibold mb-6">Let's work together!</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        I'm always interested in hearing about new projects, research opportunities, and collaborations. 
+                        Whether you have a question or just want to connect, feel free to reach out!
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary/10 p-4 rounded-full">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:manishtandurkar04@gmail.com" class="text-gray-600 hover:text-primary transition-colors">
+                                    manishtandurkar04@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary/10 p-4 rounded-full">
+                                <i class="fas fa-phone text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <a href="tel:+917588667214" class="text-gray-600 hover:text-primary transition-colors">
+                                    +91 75886 67214
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary/10 p-4 rounded-full">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Location</p>
+                                <p class="text-gray-600">Bangalore, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Icons -->
+                    <div class="mt-8">
+                        <p class="font-semibold mb-4">Connect With Me</p>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/manishtandurkar" target="_blank" class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manish-tandurkar-33a5a7226/" target="_blank" class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="mailto:manishtandurkar04@gmail.com" target="_blank" class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                            <a href="https://leetcode.com/u/Manish_04/" target="_blank" class="bg-primary/10 hover:bg-primary text-primary hover:text-white p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+                                <i class="fas fa-code text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="reveal-element">
+                    <!-- 
+                        FORMSPREE SETUP:
+                        1. Go to https://formspree.io/
+                        2. Sign up for a free account
+                        3. Create a new form and get your form endpoint
+                        4. Replace 'YOUR_FORM_ID' in the action URL below with your actual form ID
+                        Example: https://formspree.io/f/xvgpzzzz
+                    -->
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-primary hover:bg-indigo-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                        
+                        <!-- Form Status Message -->
+                        <div id="form-status" class="hidden mt-4 p-4 rounded-lg"></div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">
+                &copy; 2025 Manish Tandurkar. Built with <i class="fas fa-heart text-red-500"></i> and <span class="text-primary">passion</span>.
+            </p>
+            <p class="text-gray-500 text-sm mt-2">
+                Designed & Developed by Manish Tandurkar
+            </p>
+        </div>
+    </footer>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- ScrollReveal Library -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

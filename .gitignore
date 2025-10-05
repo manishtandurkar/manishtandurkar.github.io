@@ -1,0 +1,46 @@
+# Gitignore for Portfolio Website
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment variables (if you add any later)
+.env
+.env.local
+.env.production
+
+# Node modules (if you add build tools later)
+node_modules/
+
+# Build output (if you add build process later)
+dist/
+build/
