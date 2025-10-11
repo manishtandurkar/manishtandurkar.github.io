@@ -14,6 +14,10 @@ body {
     overflow-x: hidden;
 }
 
+body.loaded::after {
+    display: none;
+}
+
 /* ============================================
    Particle Canvas Background
    ============================================ */
@@ -78,6 +82,64 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Hero Spacing & Readability Overrides
+   Increase vertical spacing between hero title, subtitle and CTA
+   ============================================ */
+
+#home .container {
+    /* give the hero more breathing room vertically */
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#home .hero-title {
+    margin-bottom: 1.5rem; /* larger gap below the main heading */
+    line-height: 1.08;     /* slightly taller line height for big display type */
+}
+
+#home .hero-subtitle {
+    margin-bottom: 2rem;   /* more space before the CTA */
+    line-height: 1.6;      /* easier to read multi-part subtitle */
+}
+
+#home .hero-cta {
+    margin-top: 1rem;      /* separate buttons from subtitle */
+}
+
+@media (min-width: 768px) {
+    /* larger screens get extra vertical padding */
+    #home .container {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    #home .hero-title {
+        margin-bottom: 2rem;
+    }
+
+    #home .hero-subtitle {
+        margin-bottom: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    /* make sure spacing is still reasonable on small screens */
+    #home .container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #home .hero-title {
+        margin-bottom: 1rem;
+        line-height: 1.05;
+    }
+
+    #home .hero-subtitle {
+        margin-bottom: 1.25rem;
     }
 }
 

@@ -201,6 +201,7 @@
     }
 
     // Enhanced animation loop with floating shapes
+    let animationFrameId;
     function animateWithShapes() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -223,8 +224,20 @@
         // Draw connections
         drawConnections();
 
-        requestAnimationFrame(animateWithShapes);
+        animationFrameId = requestAnimationFrame(animateWithShapes);
     }
+
+    // Use enhanced animation with shapes
+    animateWithShapes();
+
+    // Stop animation when page is hidden (performance optimization)
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            cancelAnimationFrame(animationFrameId);
+        } else {
+            animateWithShapes();
+        }
+    });
 
     // Use enhanced animation with shapes
     animateWithShapes();

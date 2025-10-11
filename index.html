@@ -7,6 +7,7 @@
     <meta name="keywords" content="Manish Tandurkar, RVCE, Machine Learning, AI, Full Stack Developer, React, Python, Web Development, Software Engineer">
     <meta name="author" content="Manish Tandurkar">
     <title>Manish Tandurkar - Portfolio | ML/AI & Full Stack Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +37,7 @@
     </script>
     
     <!-- Custom CSS -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="font-inter bg-gray-50 text-gray-800">
@@ -116,6 +118,8 @@
         </div>
     </section>
 
+    <!-- Certificates Section (moved below Projects; will be inserted above Contact) -->
+
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-6">
@@ -172,30 +176,28 @@
                 <!-- Project Card 1 -->
                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
                     <div class="relative overflow-hidden group">
-                        <img src="assets/images/project1.jpg" alt="GraduateXAI" 
+                        <img src="assets/images/Project1.png" alt="Fake News Detector" 
                              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://via.placeholder.com/600x400/6366f1/ffffff?text=GraduateXAI'">
+                             onerror="this.src='https://via.placeholder.com/600x400/6366f1/ffffff?text=Fake+News+Detector'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                             <div class="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                <p class="text-sm">Research Project - Explainable AI</p>
+                                <p class="text-sm">ML Project - Fake News Detection</p>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">GraduateXAI</h3>
+                        <h3 class="text-xl font-bold mb-2">Fake News Detector</h3>
                         <p class="text-gray-600 mb-4">
-                            Explainable AI framework for skin lesion classification using Grad-CAM and attention mechanisms. Published research with 94.7% accuracy on HAM10000 dataset.
+                            Developed a machine learning model to detect fake news articles using a labeled dataset. Utilized NLP techniques for feature extraction and trained various classifiers to distinguish between real and fake news.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">PyTorch</span>
-                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Grad-CAM</span>
-                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">ResNet</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Machine Learning</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">NLP</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Scikit-learn</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://link.springer.com/chapter/10.1007/978-3-031-61475-0_25" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
-                                <i class="fas fa-book mr-2"></i>Publication
-                            </a>
-                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                            <a href="https://github.com/manishtandurkar/Fake-news-detector" class="text-gray-600 hover:text-primary transition-colors duration-300" target="_blank">
                                 <i class="fab fa-github mr-2"></i>GitHub
                             </a>
                         </div>
@@ -205,7 +207,7 @@
                 <!-- Project Card 2 -->
                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
                     <div class="relative overflow-hidden group">
-                        <img src="assets/images/project2.jpg" alt="Full Stack Blog Platform" 
+                        <img src="assets/images/project2.png" alt="Full Stack Blog Platform" 
                              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                              onerror="this.src='https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Blog+Platform'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -225,9 +227,6 @@
                             <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">MongoDB</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Project
-                            </a>
                             <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
                                 <i class="fab fa-github mr-2"></i>GitHub
                             </a>
@@ -238,7 +237,7 @@
                 <!-- Project Card 3 -->
                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
                     <div class="relative overflow-hidden group">
-                        <img src="assets/images/project3.jpg" alt="Sentiment Analysis Tool" 
+                        <img src="assets/images/project3.png" alt="Sentiment Analysis Tool" 
                              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                              onerror="this.src='https://via.placeholder.com/600x400/10b981/ffffff?text=Sentiment+Analysis'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -258,9 +257,6 @@
                             <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Flask</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Project
-                            </a>
                             <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
                                 <i class="fab fa-github mr-2"></i>GitHub
                             </a>
@@ -271,7 +267,7 @@
                 <!-- Project Card 4 -->
                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
                     <div class="relative overflow-hidden group">
-                        <img src="assets/images/project4.jpg" alt="E-Learning Platform" 
+                        <img src="assets/images/project4.png" alt="E-Learning Platform" 
                              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                              onerror="this.src='https://via.placeholder.com/600x400/f59e0b/ffffff?text=E-Learning'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -291,9 +287,6 @@
                             <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">PostgreSQL</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Project
-                            </a>
                             <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
                                 <i class="fab fa-github mr-2"></i>GitHub
                             </a>
@@ -304,7 +297,7 @@
                 <!-- Project Card 5 -->
                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 reveal-element">
                     <div class="relative overflow-hidden group">
-                        <img src="assets/images/project5.jpg" alt="AR/VR Monuments App" 
+                        <img src="assets/images/project5.png" alt="AR/VR Monuments App" 
                              class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                              onerror="this.src='https://via.placeholder.com/600x400/8b5cf6/ffffff?text=AR%2FVR+Monuments'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -326,16 +319,52 @@
                             <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">3D Modeling</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-primary hover:text-secondary transition-colors duration-300">
-                                <i class="fas fa-external-link-alt mr-2"></i>View Project
-                            </a>
-                            <a href="https://github.com/manishtandurkar" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                            <a href="https://github.com/manishtandurkar/ARHistoryApp" target="_blank" class="text-gray-600 hover:text-primary transition-colors duration-300">
                                 <i class="fab fa-github mr-2"></i>GitHub
                             </a>
                         </div>
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold font-poppins text-center mb-4 reveal-element">
+                Certificates &nbsp; <span class="text-primary">(Coming Soon)</span>
+            </h2>
+            <p class="text-center text-gray-600 mb-8 reveal-element">Placeholder area — add certificate images here. Each card will link to the certificate or open a larger view.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+                <!-- Certificate 1 -->
+                <div class="cert-card bg-gray-50 border rounded-lg p-4 text-center shadow-sm reveal-element">
+                    <div class="h-40 bg-gray-200 rounded-md overflow-hidden flex items-center justify-center">
+                        <img src="assets/images/cert1.png" alt="Certificate 1" class="object-contain h-full" onerror="this.src='https://via.placeholder.com/400x240/cccccc/666666?text=Certificate+1'">
+                    </div>
+                    <h4 class="mt-4 font-semibold">Certificate Title 1</h4>
+                    <p class="text-sm text-gray-500">Issuing Organization • Year</p>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="cert-card bg-gray-50 border rounded-lg p-4 text-center shadow-sm reveal-element">
+                    <div class="h-40 bg-gray-200 rounded-md overflow-hidden flex items-center justify-center">
+                        <img src="assets/images/cert2.png" alt="Certificate 2" class="object-contain h-full" onerror="this.src='https://via.placeholder.com/400x240/cccccc/666666?text=Certificate+2'">
+                    </div>
+                    <h4 class="mt-4 font-semibold">Certificate Title 2</h4>
+                    <p class="text-sm text-gray-500">Issuing Organization • Year</p>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="cert-card bg-gray-50 border rounded-lg p-4 text-center shadow-sm reveal-element">
+                    <div class="h-40 bg-gray-200 rounded-md overflow-hidden flex items-center justify-center">
+                        <img src="assets/images/cert3.png" alt="Certificate 3" class="object-contain h-full" onerror="this.src='https://via.placeholder.com/400x240/cccccc/666666?text=Certificate+3'">
+                    </div>
+                    <h4 class="mt-4 font-semibold">Certificate Title 3</h4>
+                    <p class="text-sm text-gray-500">Issuing Organization • Year</p>
+                </div>
             </div>
         </div>
     </section>
@@ -424,7 +453,7 @@
                         4. Replace 'YOUR_FORM_ID' in the action URL below with your actual form ID
                         Example: https://formspree.io/f/xvgpzzzz
                     -->
-                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
+                    <form id="contact-form" action="https://formspree.io/f/mblzzwvq" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-semibold mb-2">Name</label>
                             <input type="text" id="name" name="name" required
